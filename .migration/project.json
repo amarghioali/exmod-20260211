@@ -1,0 +1,7 @@
+{
+  "projectType": "xwalk",
+  "libraryUrl": "https://main--sta-xwalk-boilerplate--aemysites.aem.page/tools/sidekick/library.json",
+  "sourceUrl": "https://academy.worldbank.org/en/home",
+  "type": "xwalk",
+  "contentHostUrl": "author-p130360-e1585120.adobeaemcloud.com"
+}

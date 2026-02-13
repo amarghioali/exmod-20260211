@@ -1,0 +1,93 @@
+.cards-overlay > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.cards-overlay > ul > li {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 300px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.cards-overlay > ul > li.card-lg {
+  min-height: 360px;
+}
+
+.cards-overlay > ul > li.card-md {
+  min-height: 280px;
+}
+
+.cards-overlay .cards-overlay-image {
+  position: absolute;
+  inset: 0;
+  line-height: 0;
+}
+
+.cards-overlay .cards-overlay-image picture,
+.cards-overlay .cards-overlay-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cards-overlay > ul > li::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--card-overlay-gradient);
+  pointer-events: none;
+}
+
+.cards-overlay .cards-overlay-body {
+  position: relative;
+  z-index: 1;
+  padding: 24px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.cards-overlay .cards-overlay-body h3 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.54px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 8px;
+}
+
+.cards-overlay .cards-overlay-body p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+@media (width >= 900px) {
+  .cards-overlay > ul {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .cards-overlay > ul > li.card-lg {
+    min-height: 420px;
+  }
+
+  .cards-overlay > ul > li.card-md {
+    min-height: 340px;
+  }
+
+  .cards-overlay .cards-overlay-body h3 {
+    font-size: 32px;
+  }
+
+  .cards-overlay .cards-overlay-body p {
+    font-size: 16px;
+  }
+}

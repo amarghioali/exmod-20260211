@@ -3,19 +3,102 @@
   padding: 0;
 }
 
+.hero-container {
+  margin: 0;
+}
+
 .hero {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  padding: 80px 24px 60px;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero .hero-video {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero .hero-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero .hero-video::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(231, 237, 243, 0.3) 0%, rgba(231, 237, 243, 0.85) 60%, var(--background-color) 100%);
+}
+
+.hero .hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 .hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
+  color: var(--dark-color);
+  font-size: var(--heading-font-size-xxl);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -1.8px;
+  margin: 0 0 16px;
 }
 
+.hero p {
+  color: var(--text-secondary);
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: -0.25px;
+  margin: 0 0 24px;
+}
+
+.hero .hero-scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--link-color);
+  font-size: 14px;
+  margin-top: 24px;
+  cursor: pointer;
+}
+
+.hero .hero-scroll .hero-scroll-arrow {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--link-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: bounce 2s infinite;
+}
+
+.hero .hero-scroll .hero-scroll-arrow::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--link-color);
+  border-bottom: 2px solid var(--link-color);
+  transform: rotate(45deg) translateY(-2px);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(6px); }
+  60% { transform: translateY(3px); }
+}
+
+/* image fallback */
 .hero picture {
   position: absolute;
   z-index: -1;
@@ -32,6 +115,11 @@
 
 @media (width >= 900px) {
   .hero {
-    padding: 40px 32px;
+    padding: 120px 32px 80px;
+    min-height: 600px;
+  }
+
+  .hero h1 {
+    font-size: 56px;
   }
 }

@@ -1,0 +1,125 @@
+.cards-highlight > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.cards-highlight > ul > li {
+  background: var(--color-white);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.cards-highlight .cards-highlight-image {
+  line-height: 0;
+  position: relative;
+}
+
+.cards-highlight .cards-highlight-image img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.cards-highlight .card-featured .cards-highlight-image img {
+  aspect-ratio: 4 / 3;
+}
+
+.cards-highlight .cards-highlight-body {
+  padding: 20px 24px 24px;
+}
+
+.cards-highlight .card-tag {
+  display: inline-block;
+  background: var(--background-color);
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 32px;
+  margin-bottom: 12px;
+}
+
+.cards-highlight .cards-highlight-body h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: -0.084px;
+  color: var(--dark-color);
+  margin: 0 0 8px;
+}
+
+.cards-highlight .cards-highlight-body h3 a {
+  color: var(--dark-color);
+  text-decoration: none;
+}
+
+.cards-highlight .cards-highlight-body h3 a:hover {
+  text-decoration: underline;
+}
+
+.cards-highlight .cards-highlight-body p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin: 0 0 16px;
+}
+
+.cards-highlight .cards-highlight-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.cards-highlight .cards-highlight-body ul li {
+  display: inline;
+}
+
+.cards-highlight .cards-highlight-body a {
+  color: var(--link-color);
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  border-bottom: 2px solid var(--link-color);
+  padding-bottom: 2px;
+}
+
+.cards-highlight .cards-highlight-body a:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+@media (width >= 900px) {
+  .cards-highlight > ul {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .cards-highlight > ul > li.card-featured {
+    grid-row: 1 / 3;
+  }
+
+  .cards-highlight .card-featured .cards-highlight-image img {
+    aspect-ratio: auto;
+    height: 100%;
+  }
+
+  .cards-highlight .card-featured .cards-highlight-image {
+    flex: 1;
+  }
+
+  .cards-highlight > ul > li.card-featured {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}

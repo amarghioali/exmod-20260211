@@ -142,11 +142,25 @@ async function loadEager(doc) {
  * Loads everything that doesn't need to be delayed.
  * @param {Element} doc The container element
  */
+function buildGradientOverlay() {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'gradient-overlay';
+  wrapper.setAttribute('aria-hidden', 'true');
+  const left = document.createElement('div');
+  left.className = 'gradient-blob gradient-blob-left';
+  const right = document.createElement('div');
+  right.className = 'gradient-blob gradient-blob-right';
+  wrapper.append(left, right);
+  document.body.append(wrapper);
+}
+
 async function loadLazy(doc) {
   autolinkModals(doc);
 
   const main = doc.querySelector('main');
   await loadSections(main);
+
+  buildGradientOverlay();
 
   const { hash } = window.location;
   const element = hash ? doc.getElementById(hash.substring(1)) : false;

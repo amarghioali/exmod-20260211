@@ -40,6 +40,12 @@
     ]
   },
   {
+    "id": "carousel-programs",
+    "components": [
+      "carousel-programs-item"
+    ]
+  },
+  {
     "id": "carousel",
     "components": [
       "carousel-item"
@@ -82,6 +88,12 @@
     "id": "table-4-columns",
     "components": [
       "table-col-4"
+    ]
+  },
+  {
+    "id": "tabs-programs",
+    "components": [
+      "tabs-programs-item"
     ]
   },
   {
