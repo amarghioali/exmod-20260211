@@ -34,6 +34,18 @@
     ]
   },
   {
+    "id": "cards-highlight",
+    "components": [
+      "cards-highlight-item"
+    ]
+  },
+  {
+    "id": "cards-overlay",
+    "components": [
+      "cards-overlay-item"
+    ]
+  },
+  {
     "id": "cards",
     "components": [
       "card"
@@ -64,6 +76,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "program-finder",
+    "components": [
+      "program-finder-dropdown"
     ]
   },
   {
