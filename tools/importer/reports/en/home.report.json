@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://academy.worldbank.org/en/home",
+  "path": "en/home",
+  "timestamp": "2026-02-13T13:14:59.625Z",
+  "title": "World Bank Group Academy | Home",
+  "template": "homepage",
+  "blocks": [
+    "hero-video",
+    "cards-overlay",
+    "cards-highlight",
+    "carousel-programs",
+    "program-finder",
+    "tabs-programs"
+  ]
+}

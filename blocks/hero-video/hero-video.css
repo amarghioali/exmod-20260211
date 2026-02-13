@@ -1,0 +1,100 @@
+.hero-video-container .hero-video-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-video {
+  position: relative;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Video background */
+.hero-video .hero-video-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Dark overlay on video */
+.hero-video::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0 0 0 / 40%);
+  z-index: 1;
+}
+
+/* Hide the media row container */
+.hero-video > div:first-child {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Text overlay */
+.hero-video > div:last-child {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 60px 24px;
+}
+
+.hero-video .hero-video-overlay {
+  text-align: center;
+  max-width: 900px;
+}
+
+.hero-video h1 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+
+.hero-video p {
+  color: #fff;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Fallback image */
+.hero-video picture {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-video img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@media (width >= 900px) {
+  .hero-video {
+    min-height: 560px;
+  }
+
+  .hero-video h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-video p {
+    font-size: 1.25rem;
+  }
+
+  .hero-video > div:last-child {
+    padding: 80px 32px;
+  }
+}

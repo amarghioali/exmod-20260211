@@ -1,0 +1,87 @@
+{
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://academy.worldbank.org/en/home"
+      ],
+      "description": "World Bank Academy homepage with hero, featured content, and navigation",
+      "blocks": [
+        {
+          "name": "hero-video",
+          "instances": ["section.video-banner"]
+        },
+        {
+          "name": "cards-overlay",
+          "instances": [".lp-sticky-card-grid"]
+        },
+        {
+          "name": "cards-highlight",
+          "instances": [".academySliderComp"]
+        },
+        {
+          "name": "carousel-programs",
+          "instances": [".academy_carousel:not(.lp__tab .academy_carousel)"]
+        },
+        {
+          "name": "program-finder",
+          "instances": ["section.lp-find-program"]
+        },
+        {
+          "name": "tabs-programs",
+          "instances": [".lp__tab"]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero Video Banner",
+          "selector": "section.video-banner",
+          "style": null,
+          "blocks": ["hero-video"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Value Proposition Cards",
+          "selector": ["section.sticky-section#one-center", ".supergrid:nth-of-type(1)"],
+          "style": null,
+          "blocks": ["cards-overlay"],
+          "defaultContent": [".sticky-content .lp-aca-heading h2", ".sticky-content .lp-aca-heading a"]
+        },
+        {
+          "id": "section-3",
+          "name": "Program Types",
+          "selector": ".supergrid:nth-of-type(2)",
+          "style": null,
+          "blocks": ["cards-highlight"],
+          "defaultContent": [".academyTitle .lp-aca-heading h2"]
+        },
+        {
+          "id": "section-4",
+          "name": "Impact Programs Carousel",
+          "selector": ".supergrid:nth-of-type(3)",
+          "style": "light-blue",
+          "blocks": ["carousel-programs"],
+          "defaultContent": [".academyTitle .lp-aca-heading h2", ".academyTitle .lp-aca-heading p"]
+        },
+        {
+          "id": "section-5",
+          "name": "Program Finder",
+          "selector": "section.lp-find-program#two-center",
+          "style": null,
+          "blocks": ["program-finder"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-6",
+          "name": "Programs by Topic",
+          "selector": ".supergrid:nth-of-type(5)",
+          "style": "light-blue",
+          "blocks": ["tabs-programs"],
+          "defaultContent": [".academyTitle .lp-aca-heading h2", ".academyTitle .lp-aca-heading p"]
+        }
+      ]
+    }
+  ]
+}

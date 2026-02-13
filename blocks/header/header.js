@@ -176,7 +176,11 @@ async function buildBreadcrumbs() {
 export default async function decorate(block) {
   // load nav as fragment
   const navMeta = getMetadata('nav');
-  const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
+  let navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
+  // For local content served from /content/ prefix, try content path first
+  if (!navMeta && window.location.pathname.startsWith('/content/')) {
+    navPath = '/content/nav';
+  }
   const fragment = await loadFragment(navPath);
 
   // decorate nav DOM

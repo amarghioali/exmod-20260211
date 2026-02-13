@@ -1,0 +1,127 @@
+.tabs-programs-container .tabs-programs-wrapper {
+  max-width: unset;
+}
+
+.tabs-programs .tabs-programs-list {
+  display: flex;
+  gap: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  border-bottom: 2px solid #e0e0e0;
+  padding: 0 24px;
+}
+
+.tabs-programs .tabs-programs-list::-webkit-scrollbar {
+  display: none;
+}
+
+.tabs-programs .tabs-programs-list button {
+  flex: 0 0 max-content;
+  margin: 0;
+  border: none;
+  border-bottom: 3px solid transparent;
+  border-radius: 0;
+  padding: 12px 20px;
+  background: none;
+  color: #555;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+
+.tabs-programs .tabs-programs-list button:hover {
+  color: #1a1a2e;
+}
+
+.tabs-programs .tabs-programs-list button p {
+  margin: 0;
+}
+
+.tabs-programs .tabs-programs-list button[aria-selected='true'] {
+  color: #1a1a2e;
+  border-bottom-color: #1a1a2e;
+  background: none;
+}
+
+/* Tab panel */
+.tabs-programs .tabs-programs-panel {
+  padding: 32px 24px;
+  border: none;
+  margin-top: 0;
+  overflow: visible;
+}
+
+.tabs-programs .tabs-programs-panel[aria-hidden='true'] {
+  display: none;
+}
+
+/* Panel content - remove first cell (title, already in tab button) */
+.tabs-programs .tabs-programs-panel > div:first-child {
+  display: none;
+}
+
+/* Content area within panel */
+.tabs-programs .tabs-programs-panel > div:last-child {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+/* Heading in panel */
+.tabs-programs .tabs-programs-panel h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: #1a1a2e;
+  grid-column: 1 / -1;
+}
+
+/* Image in panel */
+.tabs-programs .tabs-programs-panel p > img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Topic entries - bold links as sub-headings */
+.tabs-programs .tabs-programs-panel p strong a {
+  color: #1a1a2e;
+  text-decoration: none;
+  font-size: 1.125rem;
+}
+
+.tabs-programs .tabs-programs-panel p strong a:hover {
+  text-decoration: underline;
+}
+
+/* Description paragraphs */
+.tabs-programs .tabs-programs-panel p {
+  margin: 0 0 4px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Spacing between topic entries */
+.tabs-programs .tabs-programs-panel p:has(strong) {
+  margin-top: 20px;
+}
+
+@media (width >= 900px) {
+  .tabs-programs .tabs-programs-list button {
+    font-size: 1.0625rem;
+    padding: 14px 24px;
+  }
+
+  .tabs-programs .tabs-programs-panel {
+    padding: 40px 32px;
+  }
+
+  .tabs-programs .tabs-programs-panel h3 {
+    font-size: 1.75rem;
+  }
+}
